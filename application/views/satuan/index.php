@@ -2,12 +2,12 @@
     <div class="container-fluid">
         <h1 class="mt-4"></h1>
         <ol class="breadcrumb mb-4">
-            <li class="breadcrumb-item"><a href="<?=site_url('user')?>">User</a></li>
+            <li class="breadcrumb-item"><a href="<?=site_url('satuan')?>">Satuan</a></li>
             <li class="breadcrumb-item active"><?= $title ?></li>
         </ol>
         <div class="card mb-4">
             <div class="card-header">
-                <a href="<?= site_url('user/add')?>"><i class="fas fa-plus"></i>  Add New</a>
+                <a href="<?= site_url('satuan/add')?>"><i class="fas fa-plus"></i>  Add New</a>
             </div>
             <?php  if ($this->session->flashdata('success')): ?>
             <div class="alert alert-success" role="alert">
@@ -21,25 +21,21 @@
                             <tr class="text-center">
                                 <th>No</th>
                                 <th>Nama</th>
-                                <th>Email</th>
-                                <th>Phone</th>
-                                <th>Role</th>
+                                <th>Deskripsi</th>
                                 <th>Action</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <?php $no = 1; foreach ($user as $user){
+                            <?php $no = 1; foreach ($satuan as $satuan){
                             echo "
                             <tr>
                                 <td class='text-center'>$no</td>
-                                <td>$user->username</td>
-                                <td>$user->email</td>
-                                <td>$user->phone</td>
-                                <td>$user->role</td>
-                                <td>
+                                <td>$satuan->name</td>
+                                <td>$satuan->deskripsi</td>
+                                <td class='text-center'>
                                     <div>
-                                        <a href=".base_url('user/getedit/'.$user->id)." class='btn btn-sm btn-info'><i class='fas fa-edit'></i> Edit</a>
-                                        <a href=".base_url('user/delete/'.$user->id)." class='btn btn-sm btn-danger' onclick='return confirm(\"Ingin menghapus data user ini?\");'><i class='fas fa-trash'></i> Hapus</a>
+                                        <a href=".base_url('satuan/getedit/'.$satuan->id)." class='btn btn-sm btn-info'><i class='fas fa-edit'></i> Edit</a>
+                                        <a href=".base_url('satuan/delete/'.$satuan->id)." class='btn btn-sm btn-danger' onclick='return confirm(\"Ingin menghapus data satuan ini?\");'><i class='fas fa-trash'></i> Hapus</a>
                                     </div>
                                 </td>
                             </tr>";
