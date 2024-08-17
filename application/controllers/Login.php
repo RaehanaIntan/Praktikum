@@ -15,6 +15,7 @@ class Login extends CI_Controller {
 		$this->load->view('login/index');
 	}
 
+
     public function dologin()
     {
         $user = $this->input->post('email');
@@ -26,7 +27,8 @@ class Login extends CI_Controller {
                     'id'    => $user['id'],
                     'email' => $user['email'],
                     'username'  => $user['username'],
-                    'role' => $user['role']
+                    'role' => $user['role'],
+                    'is_logged_in' => TRUE
                 ]; $userid = $user['id'];
                 $this->session->set_userdata($data);
                 if ($user['role'] == 'Pemilik') {

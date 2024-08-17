@@ -32,7 +32,7 @@
                     <div class="mb-3">
                         <label for="kategori" class="form-label">Kategori</label>
                         <select class="form-select" name="kategori_id" id="kategori_id" required>
-                            <option value="">Choose...</option>
+                            <option value="">-- Pilih --</option>
                             <?php foreach ($kategori as $kategori) : ?>
                             <option value="<?=$kategori->id ?>" <?=$barang->kategori_id == $kategori->id ? 'selected' : '' ?>><?=$kategori->name ?></option>
                             <?php endforeach; ?>
@@ -41,7 +41,7 @@
                     <div class="mb-3">
                         <label for="satuan" class="form-label">Satuan</label>
                         <select class="form-select" name="satuan_id" id="satuan_id" required>
-                            <option value="">Choose...</option>
+                            <option value="">-- Pilih --</option>
                             <?php foreach ($satuan as $satuan) : ?>
                             <option value="<?=$satuan->id ?>" <?=$barang->satuan_id == $satuan->id ? 'selected' : '' ?>><?=$satuan->name ?></option>
                             <?php endforeach; ?>
@@ -50,7 +50,7 @@
                     <div class="mb-3">
                         <label for="user" class="form-label">User</label>
                         <select class="form-select" name="user_id" id="user_id" required>
-                            <option value="">Choose...</option>
+                            <option value="">-- Pilih --</option>
                             <?php foreach ($user as $user) : ?>
                             <option value="<?=$user->id ?>" <?=$barang->user_id == $user->id ? 'selected' : '' ?>><?=$user->username ?></option>
                             <?php endforeach; ?>
@@ -59,7 +59,7 @@
                     <div class="mb-3">
                         <label for="supplier" class="form-label">Supplier</label>
                         <select class="form-select" name="supplier_id" id="supplier_id" required>
-                            <option value="">Choose...</option>
+                            <option value="">-- Pilih --</option>
                             <?php foreach ($supplier as $supplier) : ?>
                             <option value="<?=$supplier->id ?>" <?=$barang->supplier_id == $supplier->id ? 'selected' : '' ?>><?=$supplier->name ?></option>
                             <?php endforeach; ?>

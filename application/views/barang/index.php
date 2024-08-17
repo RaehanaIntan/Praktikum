@@ -6,8 +6,9 @@
             <li class="breadcrumb-item active"><?= $title ?></li>
         </ol>
         <div class="card mb-4">
-            <div class="card-header">
+            <div class="card-header d-flex justify-content-between align-items-center">
                 <a href="<?= site_url('barang/add') ?>"><i class="fas fa-plus"></i> Add New</a>
+                <button type="button" class="btn btn-primary" onclick="window.open('<?= site_url('barang/baranglap') ?>', '_blank')"><i class="fas fa-file"></i> Laporan</button>
             </div>
             <?php if ($this->session->flashdata('success')) : ?>
                 <div class="alert alert-success" role="alert">

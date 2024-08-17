@@ -6,6 +6,7 @@ class Barang_model extends CI_Model
 
     protected $primary = 'id';
     protected $_table = 'barang';
+    
     public function getAll()
 {
     $this->db->select('barang.*, kategori.name as kategori_name, satuan.name as satuan_name, user.username as username, supplier.name as supplier_name');
@@ -26,7 +27,8 @@ class Barang_model extends CI_Model
             'stok' => htmlspecialchars($this->input->post('stok'), true),
             'kategori_id' => htmlspecialchars($this->input->post('kategori_id'), true),
             'satuan_id' => htmlspecialchars($this->input->post('satuan_id'), true),
-            'user_id' => htmlspecialchars($this->input->post('user_id'), true),
+            'user_id' => 8,
+            // 'user_id' => $this->session->set_userdata('id'),
             'supplier_id' => htmlspecialchars($this->input->post('supplier_id'), true),
         );
         return $this->db->insert($this->_table, $data);
@@ -47,7 +49,8 @@ class Barang_model extends CI_Model
             'stok' => htmlspecialchars($this->input->post('stok'), true),
             'kategori_id' => htmlspecialchars($this->input->post('kategori_id'), true),
             'satuan_id' => htmlspecialchars($this->input->post('satuan_id'), true),
-            'user_id' => htmlspecialchars($this->input->post('user_id'), true),
+            'user_id' => 8,
+            // 'user_id' => $this->session->set_userdata('id'),
             'supplier_id' => htmlspecialchars($this->input->post('supplier_id'), true),
         );
         return $this->db->set($data)->where($this->primary, $id)->update($this->_table);

@@ -31,7 +31,7 @@
                     <div class="mb-3">
                         <label for="kategori" class="form-label">Kategori</label>
                         <select class="form-select" name="kategori_id" id="kategori_id" required>
-                            <option value="">Choose...</option>
+                            <option value="">-- Pilih --</option>
                             <?php foreach ($kategori as $kategori) : ?>
                             <option value="<?=$kategori->id ?>"><?=$kategori->name ?></option>
                             <?php endforeach; ?>
@@ -40,25 +40,25 @@
                     <div class="mb-3">
                         <label for="satuan" class="form-label">Satuan</label>
                         <select class="form-select" name="satuan_id" id="satuan_id" required>
-                            <option value="">Choose...</option>
+                            <option value="">-- Pilih --</option>
                             <?php foreach ($satuan as $satuan) : ?>
                             <option value="<?=$satuan->id ?>"><?=$satuan->name ?></option>
                             <?php endforeach; ?>
                         </select>
                     </div>
-                    <div class="mb-3">
+                    <!-- <div class="mb-3">
                         <label for="user" class="form-label">User</label>
                         <select class="form-select" name="user_id" id="user_id" required>
-                            <option value="">Choose...</option>
-                            <?php foreach ($user as $user) : ?>
-                            <option value="<?=$user->id ?>"><?=$user->username ?></option>
-                            <?php endforeach; ?>
+                            <option value="">-- Pilih --</option>
+                             foreach ($user as $user) :
+                            <option value="$user->id">$user->username</option>
+                             endforeach;
                         </select>
-                    </div>
+                    </div> -->
                     <div class="mb-3">
                         <label for="supplier" class="form-label">Supplier</label>
                         <select class="form-select" name="supplier_id" id="supplier_id" required>
-                            <option value="">Choose...</option>
+                            <option value="">-- Pilih --</option>
                             <?php foreach ($supplier as $supplier) : ?>
                             <option value="<?=$supplier->id ?>"><?=$supplier->name ?></option>
                             <?php endforeach; ?>
